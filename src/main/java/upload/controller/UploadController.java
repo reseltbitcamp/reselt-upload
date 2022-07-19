@@ -25,7 +25,7 @@ public class UploadController {
 	public ResponseEntity<?> upload(@ModelAttribute StyleDTO styleDTO,
 									@RequestParam MultipartFile img,
 									HttpSession session) {
-		String filePath = session.getServletContext().getRealPath("/resources/img");
+		String filePath = session.getServletContext().getRealPath("/resources/img/style");
 		String fileName = img.getOriginalFilename();
 		
 		File file = new File(filePath, fileName);
